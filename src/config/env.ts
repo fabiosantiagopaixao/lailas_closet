@@ -6,5 +6,5 @@ export const env = {
 
   API_URL: `https://script.google.com/macros/s/${SHEET_ID}/exec`,
 
-  WHATSAPP_NUMBER: "59163590013",
+  WHATSAPP_NUMBER: "59168385167",
 };

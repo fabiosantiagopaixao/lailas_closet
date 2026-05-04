@@ -10,5 +10,5 @@ export function generateWhatsAppMessage(
     })
     .join("\n");
 
-  return `Hola! Me gustaría comprar estos productos:\n\n${items}\n\n*Total:* Bs ${total}`;
+  return `Hola *Laila´s Closet*! Me gustaría comprar estos productos:\n\n${items}\n\n*Total:* Bs ${total}`;
 }
