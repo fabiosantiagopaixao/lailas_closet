@@ -85,6 +85,12 @@ body {
   top: 15px;
   right: 20px;
   font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cart-icon:hover {
+  transform: scale(1.1);
 }
 
 #cart-count {
@@ -325,6 +331,75 @@ body {
   width: 50px;
   height: 50px;
   animation: pulse 1.2s infinite ease-in-out;
+}
+
+.cart-page {
+  padding: 16px;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.cart-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-empty {
+  text-align: center;
+  padding: 40px;
+}
+
+/* CONTAINER DOS BOTÕES */
+.cart-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* BOTÕES */
+.cart-actions .button {
+  flex: 1;
+}
+
+/* CORES DIFERENTES */
+.button-continue {
+  background: #ccc;
+  color: #333;
+}
+
+.button-continue:hover {
+  background: #bbb;
+}
+
+.button-checkout {
+  background: #25d366; /* WhatsApp */
+  color: white;
+}
+
+.button-checkout:hover {
+  background: #1ebe5d;
+}
+
+/* 📱 MOBILE: empilha */
+@media (max-width: 500px) {
+  .cart-actions {
+    flex-direction: column;
+  }
 }
 
 /* =========================

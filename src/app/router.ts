@@ -1,5 +1,6 @@
 import { renderProductsPage } from "../pages/products";
 import { renderProductDetail } from "../pages/product";
+import { renderCartPage } from "../pages/cart";
 
 function normalizePath(path: string) {
   if (!path.endsWith("/") && !path.includes(".")) {
@@ -23,6 +24,8 @@ export function router() {
   if (path.includes("/product/")) {
     const slug = path.split("/product/")[1].replace("/", "");
     renderProductDetail(content, slug);
+  } else if (path.includes("/cart/")) {
+    renderCartPage(content);
   } else {
     renderProductsPage(content);
   }

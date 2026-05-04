@@ -1,18 +1,13 @@
-type CartItem = {
-  id: string;
-  name: string;
-  price: number;
-  image: string;
-};
+import type { ICartItem } from "../interfaces/CartItem";
 
 const STORAGE_KEY = "cart";
 
 export const cartStore = {
-  get(): CartItem[] {
+  get(): ICartItem[] {
     return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
   },
 
-  add(item: CartItem) {
+  add(item: ICartItem) {
     const cart = this.get();
     cart.push(item);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));

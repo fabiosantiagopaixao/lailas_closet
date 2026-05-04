@@ -1,6 +1,7 @@
 import logo from "../assets/logo.png";
 import { cartStore } from "../store/cart.store";
 import { navigate } from "./navigation";
+import { updateCartCount } from "../utils/cart.util";
 
 export function renderLayout(app: HTMLElement) {
   app.innerHTML = `
@@ -11,7 +12,7 @@ export function renderLayout(app: HTMLElement) {
       </div>
       <p class="subtitle">Ropas nuevas/usadas con estilo</p>
 
-      <div class="cart-icon">
+      <div class="cart-icon" id="go-cart">
         🛒 <span id="cart-count">${cartStore.count()}</span>
       </div>
     </header>
@@ -20,8 +21,14 @@ export function renderLayout(app: HTMLElement) {
 
   `;
 
+  updateCartCount();
+
   // 👉 navegação isolada
   document.getElementById("go-home")?.addEventListener("click", () => {
     navigate("/lailas_closet/");
+  });
+
+  document.getElementById("go-cart")?.addEventListener("click", () => {
+    navigate("/lailas_closet/cart/");
   });
 }

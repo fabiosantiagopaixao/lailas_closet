@@ -1,6 +1,9 @@
 import { renderLoading } from "../components/loading";
 import { ProductService } from "../services/product.service";
-import { resolveImage } from "../utils/image";
+import { resolveImage } from "../utils/image.util";
+import { cartStore } from "../store/cart.store";
+import { navigate } from "../app/navigation";
+import { updateCartCount } from "../utils/cart.util";
 
 const service = new ProductService();
 
@@ -86,7 +89,7 @@ export async function renderProductDetail(
           <p><b>Stock:</b> ${product.stock ?? 0}</p>
         </div>
 
-        <button class="button">
+       <button class="button" id="add-to-cart">
           Agregar al carrito
         </button>
       </div>
@@ -108,5 +111,20 @@ export async function renderProductDetail(
 
       thumb.classList.add("active");
     });
+  });
+
+  const addBtn = container.querySelector("#add-to-cart");
+
+  addBtn?.addEventListener("click", () => {
+    cartStore.add({
+      id: product.id,
+      name: product.name,
+      price: hasDiscount ? product.discountPrice : product.price,
+      image: product.image,
+    });
+
+    updateCartCount();
+
+    navigate("/lailas_closet/cart/");
   });
 }

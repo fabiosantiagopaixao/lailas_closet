@@ -1,5 +1,5 @@
 import { ProductService } from "../services/product.service";
-import { resolveImage } from "../utils/image";
+import { resolveImage } from "../utils/image.util";
 import { renderLoading } from "../components/loading";
 import { navigate } from "../app/navigation";
 
