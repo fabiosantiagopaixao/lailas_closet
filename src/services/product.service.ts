@@ -8,7 +8,20 @@ export class ProductService extends BaseService<IProduct> {
 
   async getAllProducts() {
     const products = await this.getAll();
-    return products;
+
+    return products
+      .map((p) => ({
+        ...p,
+        stock: p.stock ? Number(p.stock) : 0, // 👉 normaliza
+      }))
+      .sort((a, b) => {
+        // 👉 primeiro: quem tem estoque vem antes
+        if (a.stock === 0 && b.stock > 0) return 1;
+        if (a.stock > 0 && b.stock === 0) return -1;
+
+        // 👉 depois: ordenar por nome
+        return a.name.localeCompare(b.name);
+      });
   }
 
   async getFeatured() {

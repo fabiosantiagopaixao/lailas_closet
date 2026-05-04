@@ -14,10 +14,10 @@ export interface IProduct {
 
   // Imagem (mantém simples + opcional multi)
   image: string;
-  images?: string[];
+  images?: string;
 
   // Categoria
-  categorys: string[];
+  categorys: string;
   enviaPara?: string;
 
   // Roupas (importante no teu caso)
@@ -25,6 +25,7 @@ export interface IProduct {
   brand?: string; // Zara, H&M
   color?: string;
   condition?: "NEW" | "LIKE_NEW" | "USED";
+  shipmentsFor?: string;
 
   // Estoque
   stock?: number;

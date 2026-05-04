@@ -13,7 +13,11 @@ function init() {
   renderLayout(app);
   router();
 
-  // 👉 navegação SPA
+  const footer = document.getElementById("footer");
+  if (footer) {
+    footer.innerText = `© ${new Date().getFullYear()} Laila’s Closet`;
+  }
+
   window.addEventListener("popstate", router);
 }
 

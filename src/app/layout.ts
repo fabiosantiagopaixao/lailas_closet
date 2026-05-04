@@ -18,9 +18,6 @@ export function renderLayout(app: HTMLElement) {
 
     <main id="content"></main>
 
-    <footer class="footer">
-      © ${new Date().getFullYear()} Laila’s Closet
-    </footer>
   `;
 
   // 👉 navegação isolada
