@@ -5,8 +5,8 @@ import { router } from "./app/router";
 const app = document.getElementById("app")!;
 
 // 👉 correção GLOBAL do base path (ANTES de tudo)
-if (window.location.pathname === "/lailas_closet") {
-  window.location.replace("/lailas_closet/");
+if (window.location.pathname === "/lailascloset") {
+  window.location.replace("/lailascloset/");
 }
 
 function init() {

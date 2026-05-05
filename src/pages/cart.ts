@@ -18,7 +18,7 @@ export function renderCartPage(container: HTMLElement) {
     const btn = document.getElementById("go-back");
 
     if (btn) {
-      btn.onclick = () => navigate("/lailas_closet/");
+      btn.onclick = () => navigate("/lailascloset/");
     }
 
     return;
@@ -61,7 +61,7 @@ export function renderCartPage(container: HTMLElement) {
   `;
 
   document.getElementById("continue")!.onclick = () =>
-    navigate("/lailas_closet/");
+    navigate("/lailascloset/");
 
   document.getElementById("checkout")!.onclick = () => {
     const message = generateWhatsAppMessage(cart, total);
@@ -71,6 +71,6 @@ export function renderCartPage(container: HTMLElement) {
 
     cartStore.clear(); // 👈 limpa o carrinho
 
-    navigate("/lailas_closet/");
+    navigate("/lailascloset/");
   };
 }

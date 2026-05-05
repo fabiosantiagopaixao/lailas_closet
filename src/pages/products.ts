@@ -61,7 +61,7 @@ export async function renderProductsPage(container: HTMLElement) {
       const name = el.getAttribute("data-name")!;
       const slug = slugify(name);
 
-      navigate(`/lailas_closet/product/${slug}/`);
+      navigate(`/lailascloset/product/${slug}/`);
     });
   });
 }

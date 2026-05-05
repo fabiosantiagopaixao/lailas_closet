@@ -125,6 +125,6 @@ export async function renderProductDetail(
 
     updateCartCount();
 
-    navigate("/lailas_closet/cart/");
+    navigate("/lailascloset/cart/");
   });
 }
