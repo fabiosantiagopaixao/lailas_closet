@@ -25,10 +25,10 @@ export function renderLayout(app: HTMLElement) {
 
   // 👉 navegação isolada
   document.getElementById("go-home")?.addEventListener("click", () => {
-    navigate("/lailascloset/");
+    navigate("/");
   });
 
   document.getElementById("go-cart")?.addEventListener("click", () => {
-    navigate("/lailascloset/cart/");
+    navigate("/cart/");
   });
 }

@@ -6,7 +6,7 @@ const app = document.getElementById("app")!;
 
 // 👉 correção GLOBAL do base path (ANTES de tudo)
 if (window.location.pathname === "/lailascloset") {
-  window.location.replace("/lailascloset/");
+  window.location.replace("/");
 }
 
 function init() {
