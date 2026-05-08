@@ -26,7 +26,7 @@ export async function renderProductsPage(container: HTMLElement) {
            ${
              isOutOfStock
                ? `<div class="badge">Unavailable</div>`
-               : `<div class="stock-badge">DISPONIBLE: ${p.stock}</div>`
+               : `<div class="stock-badge"><span class="bold">DISPONIBLE:</span> ${p.stock}</div>`
            }
 
             <img src="${resolveImage(p.image)}" class="product-image"/>

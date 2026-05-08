@@ -164,7 +164,6 @@ body {
 
 .stock-badge {
   position: absolute;
-  bottom: 114px;
   left: 8px;
   right: 8px;
   background: rgb(142 205 233 / 70%);
@@ -173,6 +172,10 @@ body {
   text-align: center;
   padding: 6px;
   border-radius: 6px;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 /* IMAGE GRID */
