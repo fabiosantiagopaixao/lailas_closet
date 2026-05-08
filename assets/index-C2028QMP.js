@@ -31,7 +31,7 @@ var e=Object.defineProperty,t=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],en
       ${(await hn.getAllProducts()).map(e=>{console.log(`Stock: `+e.stock),console.log(`Produto: `+JSON.stringify(e,null,2));let t=e.discountPrice&&e.discountPrice<e.price,n=e.stock===0||e.stock===null||e.stock.toString()===``;return`
           <div class="product-card ${n?`disabled`:``}" data-name="${e.name}">
             
-           ${n?`<div class="badge">Unavailable</div>`:`<div class="stock-badge">DISPONIBLE: ${e.stock}</div>`}
+           ${n?`<div class="badge">Unavailable</div>`:`<div class="stock-badge"><span class="bold">DISPONIBLE:</span> ${e.stock}</div>`}
 
             <img src="${$(e.image)}" class="product-image"/>
 
